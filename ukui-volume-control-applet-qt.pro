@@ -7,7 +7,7 @@ QT  += core gui dbus KWindowSystem xml
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TEMPLATE = app
-TARGET = ukui-volume-control-applet-qt
+TARGET = audio-applet-libmate-qt
 INCLUDEPATH += .
 QMAKE_CXXFLAGS += -std=c++11
 
@@ -40,9 +40,6 @@ PKGCONFIG += \
     libpulse \
     libpulse-mainloop-glib \
     alsa
-#    libwnck-1.0
-
-#LIBS += -lukui-log4qt
 
 HEADERS += \
     customstyle.h \
@@ -87,5 +84,9 @@ qm_file.path = $${PREFIX}/translations/
 data_files.files = data/*
 data_files.path = $${PREFIX}/
 
+schemas.files = data/org.ukui.audio.gschema.xml \
+ data/org.ukui.audio.gschema.xml
+schemas.path /usr/share/glib-2.0/schemas/
+
 INSTALLS += \
-    target qm_file data_files
+    target qm_file data_files schemas
