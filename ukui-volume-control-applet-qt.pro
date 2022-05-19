@@ -86,7 +86,7 @@ data_files.path = $${PREFIX}/
 
 schemas.files = data/org.ukui.audio.gschema.xml \
  data/org.ukui.audio.gschema.xml
-schemas.path /usr/share/glib-2.0/schemas/
+schemas.path = /usr/share/glib-2.0/schemas/
 
 INSTALLS += \
     target qm_file data_files schemas
