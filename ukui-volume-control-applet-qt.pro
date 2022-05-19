@@ -84,9 +84,7 @@ qm_file.path = $${PREFIX}/translations/
 data_files.files = data/*
 data_files.path = $${PREFIX}/
 
-schemas.files += \
- data/org.ukui.audio.gschema.xml \
- data/org.ukui.audio.gschema.xml
+schemas.files += data/*.xml
 schemas.path = /usr/share/glib-2.0/schemas/
 
 INSTALLS += \
