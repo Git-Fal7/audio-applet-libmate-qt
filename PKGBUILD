@@ -17,7 +17,6 @@ build() {
   cd $pkgname
 
   qmake PREFIX=/usr/share/audio-applet-libmate-qt
-  make INSTALL_ROOT="$pkgdir" install
 }
 
 package() {
