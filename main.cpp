@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
         QApplication::setHighDpiScaleFactorRoundingPolicy(Qt::HighDpiScaleFactorRoundingPolicy::PassThrough);
     #endif
 
-    QtSingleApplication app("ukui-volume-control-applet",argc,argv);
+    QtSingleApplication app("audio-applet-libmate-qt",argc,argv);
     if (app.isRunning()) {
        app.sendMessage("raise_window_noop");
        return EXIT_SUCCESS;
